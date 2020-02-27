@@ -31,10 +31,19 @@ public class RetanguloTeste {
         Double valorEsperado = 60.0;
 
         // Act
-        double valorObtido = r1.calcularPerimetro ();
+        Double valorObtido = r1.calcularPerimetro ();
 
         // Assert
 
+        assertEquals(valorEsperado, valorObtido);
+    }
+    @Test
+    public void metodoCalcularPerimetro() {
+        Retangulo r1 = new Retangulo();
+        r1.base = 5.0;
+        r1.altura = 8.0;
+        Double valorEsperado = 26.0;
+        Double valorObtido = r1.calcularPerimetro();
         assertEquals(valorEsperado, valorObtido);
     }
 }
